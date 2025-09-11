@@ -8,33 +8,43 @@ export default function Navbar() {
 
   const navLinks = [
     { name: 'Homepage', path: '/' },
-    { name: 'About us', path: '/about-us' },
+    { name: 'About us', path: '/#about-us' },
     { name: 'Artists', path: '/artists' },
-    { name: 'RELEASES', path: '/portfolio' },
-    { name: 'Media', path: '/journal' },
-    { name: 'News', path: '/journal' },
-    { name: 'Events', path: '/journal' },
+    { name: 'RELEASES', path: '/release' },
+    { name: 'Media', path: '/media' },
+    { name: 'News', path: '/news' },
+    { name: 'Events', path: '/events' },
   ];
 
   return (
-    <div className="w-full navbar h-[88px] font-lato flex justify-between items-center px-6 lg:px-10 rounded-full">
+    <div className="w-full z-50 navbar h-[88px] font-lato flex justify-between items-center px-6 lg:px-10 rounded-full  top-0 left-0 right-0">
       <img src={logo} alt="logo" className="object-cover h-[63px] w-[176px]" />
 
       {/* Desktop Links */}
       <div className="hidden font-lato lg:flex gap-5 text-sm">
-        {navLinks.map((link) => (
-          <NavLink
-            key={link.path}
-            to={link.path}
-            className={({ isActive }) =>
-              isActive
-                ? 'font-extrabold uppercase text-[#4B0082] border-b-2 pb-3 border-[#4B0082]'
-                : 'font-semibold uppercase text-[#17090B]'
-            }
-          >
-            {link.name}
-          </NavLink>
-        ))}
+        {navLinks.map((link) =>
+          link.path === '/#about-us' ? (
+            <a
+              key={link.path}
+              href={link.path}
+              className="font-semibold uppercase text-[#17090B] hover:text-[#4B0082] transition-colors"
+            >
+              {link.name}
+            </a>
+          ) : (
+            <NavLink
+              key={link.path}
+              to={link.path}
+              className={({ isActive }) =>
+                isActive
+                  ? 'font-extrabold uppercase text-[#4B0082] border-b-2 pb-3 border-[#4B0082]'
+                  : 'font-semibold uppercase text-[#17090B]'
+              }
+            >
+              {link.name}
+            </NavLink>
+          )
+        )}
       </div>
 
       {/* Desktop Button */}
@@ -54,21 +64,32 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="absolute top-[130px] left-0 w-full mx-auto bg-white shadow-lg py-6 px-4 flex flex-col gap-4 lg:hidden z-50">
-          {navLinks.map((link) => (
-            <NavLink
-              key={link.path}
-              to={link.path}
-              onClick={() => setIsOpen(false)} // close menu on click
-              className={({ isActive }) =>
-                isActive
-                  ? 'font-extrabold uppercase text-[#4B0082] border-b-2 border-[#4B0082]'
-                  : 'font-semibold uppercase text-[#17090B]'
-              }
-            >
-              {link.name}
-            </NavLink>
-          ))}
+        <div className="absolute  top-[130px] left-0 w-full mx-auto bg-white shadow-lg py-6 px-4 flex flex-col gap-4 lg:hidden z-50">
+          {navLinks.map((link) =>
+            link.path === '/#about-us' ? (
+              <a
+                key={link.path}
+                href={link.path}
+                onClick={() => setIsOpen(false)} // close menu on click
+                className="font-semibold uppercase text-[#17090B] hover:text-[#4B0082] transition-colors"
+              >
+                {link.name}
+              </a>
+            ) : (
+              <NavLink
+                key={link.path}
+                to={link.path}
+                onClick={() => setIsOpen(false)} // close menu on click
+                className={({ isActive }) =>
+                  isActive
+                    ? 'font-extrabold uppercase text-[#4B0082] border-b-2 border-[#4B0082]'
+                    : 'font-semibold uppercase text-[#17090B]'
+                }
+              >
+                {link.name}
+              </NavLink>
+            )
+          )}
           <NavLink
             to="/contact-us"
             className="px-8 uppercase justify-center items-center flex py-6 mt-4 rounded-full text-white font-bold text-sm bg-[#4B0082]"
