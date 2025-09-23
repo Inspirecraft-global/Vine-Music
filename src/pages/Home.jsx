@@ -5,6 +5,7 @@ import FeaturedArtist from '../components/Home/FeaturedArtist';
 import AboutHero from '../components/About/AboutHero';
 import AboutMission from '../components/About/MissionAbout';
 import AboutCEO from '../components/About/AboutCEO';
+import ReleasesHome from '../components/Home/ReleasesHome';
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
       <div id="about-ceo">
         <AboutCEO />
       </div>
-      <FeaturedArtist />
+      <ReleasesHome />
     </div>
   );
 }
