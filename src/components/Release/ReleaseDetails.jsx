@@ -3,7 +3,7 @@ import Cover3 from '../../assets/Images/audi.jpg';
 
 const releases = [
   {
-    id: 'love-and-light-1',
+    id: 'love-and-light',
     artist: 'Sammy Greyson ',
     title: 'Beautiful Day',
     cover: Cover3,
