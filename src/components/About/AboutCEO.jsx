@@ -29,7 +29,7 @@ export default function AboutCEO() {
             those who need it most.
             <br />
             Whether the mentoring the next generation of healthcare
-            professionals or performing for patients and communities, he
+            professionals or individuals and communities, he
             approaches each interaction with genuine compassion and unwavering
             dedication to service.
           </p>
