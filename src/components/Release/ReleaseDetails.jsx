@@ -2,6 +2,8 @@ import React from 'react';
 import Cover3 from '../../assets/Images/audi.jpg';
 import Cover1 from '../../assets/Images/volin.jpg';
 import Cover2 from '../../assets/Images/Guitar.jpeg';
+import Cover4 from '../../assets/Images/net.jpg';
+import Cover5 from '../../assets/Images/vint.jpg';
 
 const releases = [
   {
@@ -15,28 +17,28 @@ const releases = [
     id: 'love-and-light-2',
     artist: 'Sammy Greyson',
     title: 'Madt-DEMO.mp3',
-    cover: Cover1,
+    cover: Cover2,
     audio: '/audio/Madt.mp3',
   },
   {
     id: 'love-and-light-3',
     artist: 'Sammy Greyson',
     title: 'Madt-Live.mp3',
-    cover: Cover2,
+    cover: Cover1,
     audio: '/audio/Madt-LIVE.mp3',
   },
   {
     id: 'love-and-light-4',
     artist: 'Sammy Greyson',
     title: 'Unsual Praise_Sammy Droos',
-    cover: Cover1,
+    cover: Cover4,
     audio: '/audio/Praise_Sammy.mp3',
   },
   {
     id: 'love-and-light-5',
     artist: 'Sammy Greyson',
     title: 'Unsual Praise_Sammy Droos',
-    cover: Cover3,
+    cover: Cover5,
     audio: '/audio/AUD-20250619-WA0007.mp3',
   },
 ];
